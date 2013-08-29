@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="60" height="30" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="barhall" tilewidth="32" tileheight="32" spacing="1" margin="1">
+  <image source="barhall.png" width="2000" height="1000"/>
+ </tileset>
+ <layer name="layer0" width="60" height="30">
+  <data encoding="base64" compression="zlib">
+   eJwV2YMSIAoOBMBb27Zt27Zt27Zt27Zt27Zte/f6VaW/IZNJgP/9738BCURgghCUYAQnBCEJRWjCEJZwhCcCEYlEZKIQlWhEJwYxiUVs4hCXeMQnAQlJRGKSkJRkJCcFKUlFatKQlnSkJwMZyURmspCVbGQnBznJRW7ykJd85KcABSlEYYpQlGIUpwQlKUVpylCWcpSnAhWpRGWqUJVqVKcGNalFbepQl3rUpwENaURjmtCUZjSnBS1pRWva0JZ2tKcDHelEZ7rQlW50pwc96UVv+tCXfvRnAAMZxGCGMJRhDGcEIxnFaMYwlnGMZwITmcRkpjCVaUxnBjOZxWzmMJd5zGcBC1nEYpawlGUsZwUrWcVq1rCWdaxnAxvZxGa2sJVtbGcHO9nFbvawl33s5wAHOcRhjnCUYxznBCc5xWnOcJZznOcCF7nEZa5wlWtc5wY3ucVt7nCXe9znAQ95xGOe8JRnPOcFL3nFa97wlne85wMf+cRnvvCVb3znBz/5xW/+8Jd//C+AISCBCEwQghKM4IQgJKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQgIYlITBKSkozkpCAlqUhNGtKSjvRkICOZyEwWspKN7OQgJ7nITR7yko/8FKAghShMEYpSjOKUoCSlKE0ZylKO8lSgIpWoTBWqUo3q1KAmtahNHepSj/o0oCGNaEwTmtKM5rSgJa1oTRva0o72dKAjnehMF7rSje70oCe96E0f+tKP/gxgIIMYzBCGMozhjGAkoxjNGMYyjvFMYCKTmMwUpjKN6cxgJrOYzRzmMo/5LGAhi1jMEpayjOWsYCWrWM0a1rKO9WxgI5vYzBa2so3t7GAnu9jNHvayj/0c4CCHOMwRjnKM45zgJKc4zRnOco7zXOAil7jMFa5yjevc4Ca3uM0d7nKP+zzgIY94zBOe8oznvOAlr3jNG97yjvd84COf+MwXvvKN7/zgJ7/4zR/+8o//Fn8AAhKIwAQhKMEITghCEorQhCEs4QhPBCISichEISrRiE4MYhKL2MQhLvGITwISkojEJCEpyUhOClKSitSkIS3pSE8GMpKJzGQhK9nITg5ykovc5CEv+chPAQpSiMIUoSjFKE4JSlKK0pShLOUoTwUqUonKVKEq1ahODWpSi9rUoS71qE8DGtKIxjShKc1oTgta0orWtKEt7WhPBzrSic50oSvd6E4PetKL3vShL/3ozwAGMojBDGEowxjOCEYyitGMYSzjGM8EJjKJyUxhKtOYzgxmMovZzGEu85jPAhayiMUsYSnLWM4KVrKK1axhLetYzwY2sonNbGEr29jODnayi93sYS/72M8BDnKIwxzhKMc4zglOcorTnOEs5zjPBS5yictc4SrXuM4NbnKL29zhLve4zwMe8ojHPOEpz3jOC17yite84S3veM8HPvKJz3zhK9/4zg9+8ovf/OEv//gv9AcgIIEITBCCEozghCAkoQhNGMISjvBEICKRiEwUohKN6MQgJrGITRziEo/4JCAhiUhMEpKSjOSkICWpSE0a0pKO9GQgI5nITBayko3s5CAnuchNHvKSj/wUoCCFKEwRilKM4pSgJKUoTRnKUo7yVKAilahMFapSjerUoCa1qE0d6lKP+jSgIY1oTBOa0ozmtKAlrWhNG9rSjvZ0oCOd6EwXutKN7vSgJ73oTR/60o/+DGAggxjMEIYyjOGMYCSjGM0YxjKO8UxgIpOYzBSmMo3pzGAms5jNHOYyj/ksYCGLWMwSlrKM5axgJatYzRrWso71bGAjm9jMFrayje3sYCe72M0e9rKP/RzgIIc4zBGOcozjnOAkpzjNGc5yjvNc4CKXuMwVrnKN69zgJre4zR3uco/7POAhj3jME57yjOe84CWveM0b3vKO93zgI5/4zBe+8o3v/OAnv/jNH/7yj/8O/gAEJBCBCUJQghGcEIQkFKEJQ1jCEZ4IRCQSkYlCVKIRnRjEJBaxiUNc4hGfBCQkEYlJQlKSkZwUpCQVqUlDWtKRngxkJBOZyUJWspGdHOQkF7nJQ17ykZ8CFKQQhSlCUYpRnBKUpBSlKUNZylGeClSkEpWpQlWqUZ0a1KQWtalDXepRnwY0pBGNaUJTmtGcFrSkFa1pQ1va0Z4OdKQTnelCV7rRnR70pBe96UNf+tGfAQxkEIMZwlCGMZwRjGQUoxnDWMYxnglMZBKTmcJUpjGdGcxkFrOZw1zmMZ8FLGQRi1nCUpaxnBWsZBWrWcNa1rGeDWxkE5vZwla2sZ0d7GQXu9nDXvaxnwMc5BCHOcJRjnGcE5zkFKc5w1nOcZ4LXOQSl7nCVa5xnRvc5Ba3ucNd7nGfBzzkEY95wlOe8ZwXvOQVr3nDW97xng985BOf+cJXvvGdH/zkF7/5w1/+8V/ZF4CABCIwQQhKMIITgpCEIjRhCEs4whOBiEQiMlGISjSiE4OYxCI2cYhLPOKTgIQkIjFJSEoykpOClKQiNWlISzrSk4GMZCIzWchKNrKTg5zkIjd5yEs+8lOAghSiMEUoSjGKU4KSlKI0ZShLOcpTgYpUojJVqEo1qlODmtSiNnWoSz3q04CGNKIxTWhKM5rTgpa0ojVtaEs72tOBjnSiM13oSje604Oe9KI3fehLP/ozgIEMYjBDGMowhjOCkYxiNGMYyzjGM4GJTGIyU5jKNKYzg5nMYjZzmMs85rOAhSxiMUtYyjKWs4KVrGI1a1jLOtazgY1sYjNb2Mo2trODnexiN3vYyz72c4CDHOIwRzjKMY5zgpOc4jRnOMs5znOBi1ziMle4yjWuc4Ob3OI2d7jLPe7zgIc84jFPeMoznvOCl7ziNW94yzve84GPfOIzX/jKN77zg5/84jd/+Ms//iv6AxCQQAQmCEEJRnBCEJJQhCYMYQlHeCIQkUhEJgpRiUZ0YhCTWMQmDnGJR3wSkJBEJCYJSUlGclKQklSkJg1pSUd6MpCRTGQmC1nJRnZykJNc5CYPeclHfgpQkEIUpghFKUZxSlCSUpSmDGUpR3kqUJFKVKYKValGdWpQk1rUpg51qUd9GtCQRjSmCU1pRnNa0JJWtKYNbWlHezrQkU50pgtd6UZ3etCTXvSmD33pR38GMJBBDGYIQxnGcEYwklGMZgxjGcd4JjCRSUxmClOZxnRmMJNZzGYOc5nHfBawkEUsZglLWcZyVrCSVaxmDWtZx3o2sJFNbGYLW9nGdnawk13sZg972cd+DnCQQxzmCEc5xnFOcJJTnOYMZznHeS5wkUtc5gpXucZ1bnCTW9zmDne5x30e8JBHPOYJT3nGc17wkle85g1vecd7PvCRT3zmC1/5xnd+8JNf/OYPf/nHf0++AAQkEIEJQlCCEZz/Ax+TkhE=
+  </data>
+ </layer>
+ <objectgroup name="object0" width="60" height="30">
+  <object name="Celebrity" x="679" y="7" width="160" height="320"/>
+ </objectgroup>
+ <objectgroup name="objPlayer" width="60" height="30">
+  <object name="player5" x="281" y="77" width="96" height="96">
+   <properties>
+    <property name="position" value="5"/>
+   </properties>
+  </object>
+  <object name="player2" x="183" y="466" width="96" height="96">
+   <properties>
+    <property name="position" value="2"/>
+   </properties>
+  </object>
+  <object name="player4" x="248" y="192" width="96" height="96">
+   <properties>
+    <property name="position" value="4"/>
+   </properties>
+  </object>
+  <object name="player3" x="216" y="316" width="96" height="96">
+   <properties>
+    <property name="position" value="3"/>
+   </properties>
+  </object>
+  <object name="player1" x="134" y="660" width="96" height="96">
+   <properties>
+    <property name="position" value="1"/>
+   </properties>
+  </object>
+  <object name="player6" x="528" y="325" width="96" height="96">
+   <properties>
+    <property name="position" value="6"/>
+   </properties>
+  </object>
+  <object name="player7" x="526" y="569" width="96" height="96">
+   <properties>
+    <property name="position" value="7"/>
+   </properties>
+  </object>
+  <object name="player9" x="737" y="563" width="96" height="96">
+   <properties>
+    <property name="position" value="9"/>
+   </properties>
+  </object>
+  <object name="player8" x="749" y="324" width="96" height="96">
+   <properties>
+    <property name="position" value="8"/>
+   </properties>
+  </object>
+  <object name="player10" x="1034" y="400" width="96" height="96">
+   <properties>
+    <property name="position" value="10"/>
+   </properties>
+  </object>
+  <object name="player11" x="1011" y="657" width="96" height="96">
+   <properties>
+    <property name="position" value="11"/>
+   </properties>
+  </object>
+  <object name="player13" x="1218" y="654" width="96" height="96">
+   <properties>
+    <property name="position" value="13"/>
+   </properties>
+  </object>
+  <object name="player12" x="1247" y="402" width="96" height="96">
+   <properties>
+    <property name="position" value="12"/>
+   </properties>
+  </object>
+  <object name="player15" x="1457" y="248" width="96" height="96">
+   <properties>
+    <property name="position" value="15"/>
+   </properties>
+  </object>
+  <object name="player14" x="1338" y="12" width="96" height="96">
+   <properties>
+    <property name="position" value="14"/>
+   </properties>
+  </object>
+  <object name="player16" x="1513" y="10" width="96" height="96">
+   <properties>
+    <property name="position" value="16"/>
+   </properties>
+  </object>
+  <object name="player17" x="1662" y="240" width="96" height="96">
+   <properties>
+    <property name="position" value="17"/>
+   </properties>
+  </object>
+  <object name="player19" x="1768" y="462" width="96" height="96">
+   <properties>
+    <property name="position" value="19"/>
+   </properties>
+  </object>
+  <object name="player18" x="1560" y="470" width="96" height="96">
+   <properties>
+    <property name="position" value="18"/>
+   </properties>
+  </object>
+  <object name="player20" x="1544" y="718" width="96" height="96">
+   <properties>
+    <property name="position" value="20"/>
+   </properties>
+  </object>
+  <object name="player21" x="1748" y="715" width="96" height="96">
+   <properties>
+    <property name="position" value="21"/>
+   </properties>
+  </object>
+  <object name="player22" x="1739" y="67" width="96" height="96">
+   <properties>
+    <property name="position" value="22"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,30 @@
+class CUIManager : public CCObject
+{
+	static CUIManager* sharedInstancePtr();
+	void Destroy();
+	int CreateDlg(int nDialogIDD, bool bShow, int hdlParent);
+	bool ShowDialog(int nDlgHandle, bool bShow, bool bFront);
+	bool IsVisible(DLG_HANDLE nDlgHandle);
+	bool IsDlgVisible(DLG_IDD nDialogIDD);
+	DWORD SendMessage( DLG_HANDLE hDlg, UINT Msg, WPARAM wParam, LPARAM lParam );
+	CCMyWndObject* GetWndObj(DLG_HANDLE nWndObjHandle);
+	CCMyDialog* GetDlg(DLG_HANDLE nDlgHandle);
+	void ShowModalDlg(DLG_HANDLE nDlgHandle);
+	void SetAutoCloseDialog(DLG_HANDLE handle,bool bAutoClose);
+	void BindToFront(DLG_HANDLE hDlg);
+	void BindToBack(DLG_HANDLE hDlg);
+	DLG_HANDLE GetFrontDlg(void);
+	DLG_HANDLE OnTouchBegan(CCTouch* pTouch);
+	void DoTouchOver(void);
+	DLG_HANDLE GetTouchHandleDlg(void) const;
+	DLG_HANDLE GetTouchHandleObj(void) const;
+	void CleanTouchHandleObj(void);
+	bool CloseAllDialog();
+	bool ReleaseAllDialog();
+	CCMyWndObject* GetAppWnd(void);
+	void OnNetPackage(void* pDataPkg);
+	void AddSceneHoldDlg(DLG_HANDLE hDlg, CCMyDialog* pDlg);
+	void SynOnSceneEnter(CCNode* pScene);
+	void SynOnSceneExit(CCNode* pScene);
+	void EnableAutoDelDialog(bool bEnableAutoDelDialog);
+};

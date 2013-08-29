@@ -1,0 +1,21 @@
+
+class CCMyDialog : public CCLayer , public CCDialogBase
+{
+	virtual void Create(int nWndID, CCMyWndObject *pParent);
+	virtual void OnNetPackage(void* pDataPkg);
+	void SetHoldScene(void);
+	virtual void setVisible(bool visible);
+	virtual bool isVisible();
+	void SetShow(bool visible);
+	bool IsShow(void);
+	virtual int GetType()const;
+	const char* GetBgAni(void);
+	void SetBgAni(const char* pszAni);
+    bool isTouchInside(CCTouch * touch);
+
+	static CCMyDialog* createEx(int nWndID, CCMyDialog *pParent);
+	static CCMyDialog* create(int nWndID);
+
+};
+
+#endif

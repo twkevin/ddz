@@ -1,0 +1,6 @@
+
+class CCtrlStatic : public CCLabelTTF, public CCMyWndObject
+{
+	static CCtrlStatic* create(int nWndID, CCMyDialog *pParent);
+};
+

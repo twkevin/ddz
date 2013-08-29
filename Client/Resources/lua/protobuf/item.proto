@@ -1,0 +1,12 @@
+
+option optimize_for = LITE_RUNTIME;
+
+message item {
+	optional uint32 id = 1;
+	optional uint32 type = 2;
+	optional uint32 amount = 3;
+}
+
+message load_item {
+	repeated item items = 1;
+}

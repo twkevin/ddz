@@ -1,0 +1,18 @@
+
+enum
+{
+	CTRLIMAGEANISTRETCH_NORMAL					= 0,
+	CTRLIMAGEANISTRETCH_STRETCH					= 1,
+	CTRLIMAGEANISTRETCH_STRETCHNINESIGNAL		= 2,
+};
+
+class CCtrlImageEx : public CCControl, public CCMyWndObject
+{
+	static CCtrlImageEx* create(int nWndID, CCMyDialog *pParent);
+	const char* GetBgAni();
+	void SetBgAni(const char* pszAni);	
+	virtual int getAniStretch(void);
+	virtual void setAniStretch(int var);
+};
+
+

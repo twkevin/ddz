@@ -1,0 +1,20 @@
+
+enum
+{
+	CTRLBUTTONANISTRETCH_NORMAL					= 0,
+	CTRLBUTTONANISTRETCH_STRETCH				= 1,
+	CTRLBUTTONANISTRETCH_STRETCHNINESIGNAL		= 2,
+};
+
+class CCtrlButtonEx : public CCControl, public CCMyWndObject
+{
+	static CCtrlButtonEx* create(int nWndID, CCMyDialog *pParent);
+	const char* GetBgAni();
+	void SetBgAni(const char* pszAni);	
+	virtual int getAniStretch(void);
+	virtual void setAniStretch(int var);
+	virtual int getZoomOnTouchDown(void);
+	virtual void setZoomOnTouchDown(int var);
+};
+
+

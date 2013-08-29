@@ -1,0 +1,6 @@
+message test {
+  repeated int32 v = 1;
+  repeated string x = 2;
+}
+
+

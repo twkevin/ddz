@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E9200EA9-BB35-47A8-8B57-B06DE6C500ED}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>UIFramework</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)..\Libs\ForWin32\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)..\..\Lib</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;$(ProjectDir)..\cocos2dx\cocos2dx;$(ProjectDir)..\cocos2dx\cocos2dx\include;$(ProjectDir)..\cocos2dx\cocos2dx\kazmath\include;$(ProjectDir)..\cocos2dx\cocos2dx\platform\win32;$(ProjectDir)..\cocos2dx\cocos2dx\platform\third_party\win32;$(ProjectDir)..\cocos2dx\cocos2dx\platform\third_party\win32\OGLES;$(ProjectDir)..\cocos2dx\cocos2dx\platform\third_party\win32\pthread;$(ProjectDir)..\cocos2dx\cocos2dx\platform\third_party\win32\iconv;$(ProjectDir)..\cocos2dx\cocos2dx\platform\third_party\win32\libxml2;$(ProjectDir)..\cocos2dx\CocosDenshion\include;$(ProjectDir)..\cocos2dx\extensions;$(ProjectDir)..\BaseCode;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;$(ProjectDir)..\cocos2dx;$(ProjectDir)..\cocos2dx\include;$(ProjectDir)..\cocos2dx\kazmath\include;$(ProjectDir)..\cocos2dx\platform\win32;$(ProjectDir)..\cocos2dx\platform\third_party\win32;$(ProjectDir)..\cocos2dx\platform\third_party\win32\OGLES;$(ProjectDir)..\cocos2dx\platform\third_party\win32\pthread;$(ProjectDir)..\cocos2dx\platform\third_party\win32\iconv;$(ProjectDir)..\external;$(ProjectDir)..\CocosDenshion\include;$(ProjectDir)..\openssl;$(ProjectDir)..\BaseCode;$(ProjectDir)..\extensions;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppWnd.cpp" />
+    <ClCompile Include="CtrlBMFontStatic.cpp" />
+    <ClCompile Include="CtrlButton9.cpp" />
+    <ClCompile Include="CtrlCheckBox.cpp" />
+    <ClCompile Include="CtrlPage.cpp" />
+    <ClCompile Include="CtrlProgress.cpp" />
+    <ClCompile Include="CtrlButtonEx.cpp" />
+    <ClCompile Include="CtrlEdit.cpp" />
+    <ClCompile Include="CtrlImage.cpp" />
+    <ClCompile Include="CtrlImageEx.cpp" />
+    <ClCompile Include="CtrlList.cpp" />
+    <ClCompile Include="CtrlListCell.cpp" />
+    <ClCompile Include="CtrlSlider.cpp" />
+    <ClCompile Include="CtrlStatic.cpp" />
+    <ClCompile Include="CtrlStaticEx.cpp" />
+    <ClCompile Include="DialogBase.cpp" />
+    <ClCompile Include="DialogImpl.cpp" />
+    <ClCompile Include="MyDialog.cpp" />
+    <ClCompile Include="MyWndObject.cpp" />
+    <ClCompile Include="UIManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppWnd.h" />
+    <ClInclude Include="CtrlBMFontStatic.h" />
+    <ClInclude Include="CtrlButton9.h" />
+    <ClInclude Include="CtrlCheckBox.h" />
+    <ClInclude Include="CtrlPage.h" />
+    <ClInclude Include="CtrlProgress.h" />
+    <ClInclude Include="CtrlButtonEx.h" />
+    <ClInclude Include="CtrlEdit.h" />
+    <ClInclude Include="CtrlImage.h" />
+    <ClInclude Include="CtrlImageEx.h" />
+    <ClInclude Include="CtrlList.h" />
+    <ClInclude Include="CtrlListCell.h" />
+    <ClInclude Include="CtrlSlider.h" />
+    <ClInclude Include="CtrlStatic.h" />
+    <ClInclude Include="CtrlStaticEx.h" />
+    <ClInclude Include="DialogBase.h" />
+    <ClInclude Include="DialogImpl.h" />
+    <ClInclude Include="MyDialog.h" />
+    <ClInclude Include="MyGlobal.h" />
+    <ClInclude Include="MyWndObject.h" />
+    <ClInclude Include="UIFramework.h" />
+    <ClInclude Include="UIManager.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

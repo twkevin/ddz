@@ -1,0 +1,10 @@
+
+
+class CCtrlEdit : public KeyboardNotificationLayer, public CCTextFieldDelegate, public CCMyWndObject
+{
+	static CCtrlEdit* create(int nWndID, CCMyDialog *pParent);
+	std::string getString();
+	std::string getPlaceHolder();
+	void setString(const char* pszText);
+};
+

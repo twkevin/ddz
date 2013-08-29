@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Auxiliary">
+      <UniqueIdentifier>{9a2dc6a0-25dc-4590-a904-df440e8c7b1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Socket">
+      <UniqueIdentifier>{91dacb85-11b9-4110-877c-7f4e61099f60}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Auxiliary\common_macro_define.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="Auxiliary\delegate.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="Auxiliary\delegate_impl.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="Auxiliary\generic_macro_define.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="Auxiliary\log2file.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="Auxiliary\log.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="Auxiliary\mutex.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="Auxiliary\raw_type.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="Auxiliary\string_func.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="Auxiliary\thread.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="Auxiliary\time_func.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="Auxiliary\win32_setting.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="Socket\buffStream.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="Socket\networkaddress.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="Socket\socketThread.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="Socket\tcpClientSocket.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="Socket\tcpConnection.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Auxiliary\log2file.cpp">
+      <Filter>Auxiliary</Filter>
+    </ClCompile>
+    <ClCompile Include="Auxiliary\log.cpp">
+      <Filter>Auxiliary</Filter>
+    </ClCompile>
+    <ClCompile Include="Auxiliary\mutex.cpp">
+      <Filter>Auxiliary</Filter>
+    </ClCompile>
+    <ClCompile Include="Auxiliary\string_func.cpp">
+      <Filter>Auxiliary</Filter>
+    </ClCompile>
+    <ClCompile Include="Auxiliary\thread.cpp">
+      <Filter>Auxiliary</Filter>
+    </ClCompile>
+    <ClCompile Include="Auxiliary\time_func.cpp">
+      <Filter>Auxiliary</Filter>
+    </ClCompile>
+    <ClCompile Include="Socket\networkaddress.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="Socket\socketThread.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="Socket\tcpClientSocket.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="Socket\tcpConnection.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

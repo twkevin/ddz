@@ -1,0 +1,13 @@
+$#include "UIFramework.h"
+
+$pfile "UIManager.pkg"
+$pfile "MyDialog.pkg"
+$pfile "CtrlStatic.pkg"
+$pfile "CtrlImageEx.pkg"
+$pfile "CtrlButtonEx.pkg"
+$pfile "CtrlEdit.pkg"
+
+
+
+
+

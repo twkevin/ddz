@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{423ABAB5-8D97-4D12-9976-00861444F24D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>NetFramework</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)..\Libs\ForWin32\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)..\..\Lib</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;$(ProjectDir)..\cocos2dx\cocos2dx\platform\third_party\win32\libxml2;$(ProjectDir)..\cocos2dx\cocos2dx\platform\third_party\win32\pthread;$(ProjectDir)..\BaseCode;$(ProjectDir)Auxiliary;$(ProjectDir)Socket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>ws2_32.lib;libxml2.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\cocos2dx\cocos2dx\platform\third_party\win32\libraries</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;$(ProjectDir)..\cocos2dx;$(ProjectDir)..\cocos2dx\include;$(ProjectDir)..\cocos2dx\kazmath\include;$(ProjectDir)..\cocos2dx\platform\win32;$(ProjectDir)..\cocos2dx\platform\third_party\win32;$(ProjectDir)..\cocos2dx\platform\third_party\win32\OGLES;$(ProjectDir)..\cocos2dx\platform\third_party\win32\pthread;$(ProjectDir)..\cocos2dx\platform\third_party\win32\iconv;$(ProjectDir)..\external;$(ProjectDir)..\CocosDenshion\include;$(ProjectDir)..\openssl;$(ProjectDir)..\BaseCode;$(ProjectDir)..\extensions;$(ProjectDir)Auxiliary;$(ProjectDir)Socket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Auxiliary\common_macro_define.h" />
+    <ClInclude Include="Auxiliary\delegate.h" />
+    <ClInclude Include="Auxiliary\delegate_impl.h" />
+    <ClInclude Include="Auxiliary\generic_macro_define.h" />
+    <ClInclude Include="Auxiliary\log.h" />
+    <ClInclude Include="Auxiliary\log2file.h" />
+    <ClInclude Include="Auxiliary\mutex.h" />
+    <ClInclude Include="Auxiliary\raw_type.h" />
+    <ClInclude Include="Auxiliary\string_func.h" />
+    <ClInclude Include="Auxiliary\thread.h" />
+    <ClInclude Include="Auxiliary\time_func.h" />
+    <ClInclude Include="Auxiliary\win32_setting.h" />
+    <ClInclude Include="Socket\buffStream.h" />
+    <ClInclude Include="Socket\networkaddress.h" />
+    <ClInclude Include="Socket\socketThread.h" />
+    <ClInclude Include="Socket\tcpClientSocket.h" />
+    <ClInclude Include="Socket\tcpConnection.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Auxiliary\log.cpp" />
+    <ClCompile Include="Auxiliary\log2file.cpp" />
+    <ClCompile Include="Auxiliary\mutex.cpp" />
+    <ClCompile Include="Auxiliary\string_func.cpp" />
+    <ClCompile Include="Auxiliary\thread.cpp" />
+    <ClCompile Include="Auxiliary\time_func.cpp" />
+    <ClCompile Include="Socket\networkaddress.cpp" />
+    <ClCompile Include="Socket\socketThread.cpp" />
+    <ClCompile Include="Socket\tcpClientSocket.cpp" />
+    <ClCompile Include="Socket\tcpConnection.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
