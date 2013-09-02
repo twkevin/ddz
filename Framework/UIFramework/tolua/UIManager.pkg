@@ -27,4 +27,5 @@ class CUIManager : public CCObject
 	void SynOnSceneEnter(CCNode* pScene);
 	void SynOnSceneExit(CCNode* pScene);
 	void EnableAutoDelDialog(bool bEnableAutoDelDialog);
+	int GetHandleByIDD(int nIDD);
 };

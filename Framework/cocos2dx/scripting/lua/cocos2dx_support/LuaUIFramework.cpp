@@ -1,6 +1,6 @@
 /*
 ** Lua binding: UIFramework
-** Generated automatically by tolua++-1.0.92 on 08/28/13 17:30:45.
+** Generated automatically by tolua++-1.0.92 on 09/02/13 10:26:13.
 */
 
 /****************************************************************************
@@ -1043,6 +1043,40 @@ static int tolua_UIFramework_CUIManager_EnableAutoDelDialog00(lua_State* tolua_S
 #ifndef TOLUA_RELEASE
  tolua_lerror:
  tolua_error(tolua_S,"#ferror in function 'EnableAutoDelDialog'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: GetHandleByIDD of class  CUIManager */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CUIManager_GetHandleByIDD00
+static int tolua_UIFramework_CUIManager_GetHandleByIDD00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CUIManager",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CUIManager* self = (CUIManager*)  tolua_tousertype(tolua_S,1,0);
+  int nIDD = ((int)  tolua_tonumber(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'GetHandleByIDD'", NULL);
+#endif
+  {
+   int tolua_ret = (int)  self->GetHandleByIDD(nIDD);
+   tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'GetHandleByIDD'.",&tolua_err);
  return 0;
 #endif
 }
@@ -2170,6 +2204,7 @@ TOLUA_API int tolua_UIFramework_open (lua_State* tolua_S)
    tolua_function(tolua_S,"SynOnSceneEnter",tolua_UIFramework_CUIManager_SynOnSceneEnter00);
    tolua_function(tolua_S,"SynOnSceneExit",tolua_UIFramework_CUIManager_SynOnSceneExit00);
    tolua_function(tolua_S,"EnableAutoDelDialog",tolua_UIFramework_CUIManager_EnableAutoDelDialog00);
+   tolua_function(tolua_S,"GetHandleByIDD",tolua_UIFramework_CUIManager_GetHandleByIDD00);
   tolua_endmodule(tolua_S);
   tolua_cclass(tolua_S,"CCMyDialog","CCMyDialog","CCLayer",NULL);
   tolua_beginmodule(tolua_S,"CCMyDialog");

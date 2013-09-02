@@ -170,10 +170,12 @@ local function main()
 			
 			--local hDlg = CUIManager:sharedInstancePtr():CreateDlg(100, true, 0)
 			--CUIManager:sharedInstancePtr():ShowDialog(hDlg, true, true)
+			local hDlg = CUIManager:sharedInstancePtr():GetHandleByIDD(100)
+			CUIManager:sharedInstancePtr():ShowDialog(hDlg, true, true)
 			
-			-- crash
-			local dlg = DlgLogin:create()
-	        dlg.myDlg:setVisible(true)
+			--
+			--local dlg = DlgLogin:create()
+	        --dlg.myDlg:setVisible(true)
         end
 
         -- add a popup menu

@@ -50,6 +50,18 @@ void CUIManager::AddDlg(CCMyDialog *pDlg)
 	}
 
 	m_MapDialog[pDlg->GetHandle()] = pDlg;
+	m_mapIDDHandle[pDlg->getWndID()] = pDlg->GetHandle();
+}
+
+int CUIManager::GetHandleByIDD(int nIDD)
+{
+	std::map<int,int>::iterator it = m_mapIDDHandle.find(nIDD);
+	if (it == m_mapIDDHandle.end()) 
+	{
+		return 0;
+	}
+
+	return it->second;
 }
 
 DLG_HANDLE CUIManager::CreateDlg(DLG_IDD nDialogIDD, bool bShow,DLG_HANDLE hdlParent/*=NULL*/)
@@ -71,18 +83,6 @@ DLG_HANDLE CUIManager::CreateDlg(DLG_IDD nDialogIDD, bool bShow,DLG_HANDLE hdlPa
 		pDlg->setVisible(bShow);
 		return pDlg->GetHandle();
 	}
-// 	else
-// 	{
-// 		pDlg = new CCMyDialog;
-// 
-// 		if (pDlg)
-// 		{
-// 			pDlg->Create(nDialogIDD, lpParent);
-// 			m_MapDialog[pDlg->GetHandle()] = pDlg;
-// 			pDlg->setVisible(bShow);
-// 			return pDlg->GetHandle();
-// 		}
-// 	}
 
 	return 0;
 }

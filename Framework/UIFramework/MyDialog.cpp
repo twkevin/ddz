@@ -175,8 +175,6 @@ void CCMyDialog::setVisible(bool visible)
 	bool bOldVisible = IsShow();
 	CCNode::setVisible(visible);
 
-	return; // for lua tmp
-
 	if (visible == bOldVisible)
 	{
 		return;

@@ -21,6 +21,7 @@ public:
 	//销毁
 	void Destroy();
 
+	int GetHandleByIDD(int nIDD);
 	void AddDlg(CCMyDialog *pDlg);
 
 	//创建新的对话框,返回句柄
@@ -93,7 +94,7 @@ public:
 	// 可析构Scene退出时必须同步关闭其子Dialog
 	void SynOnSceneExit(cocos2d::CCNode* pScene);
 
-	void EnableAutoDelDialog(bool bEnableAutoDelDialog);//内部调用，外部不要调
+	void EnableAutoDelDialog(bool bEnableAutoDelDialog);//内部调用，外部不要调	
 
 protected:
 	//检查模态对话框状态(退出模态对话框时,清除模态对话框状态)
@@ -122,6 +123,7 @@ protected:
 	DLG_HANDLE m_hObjTouchHandle;		// 点击到的控件
 
 	MAP_DIALOG m_mapHoldDialog;			// Scene切换后跟随显示的对话框
+	std::map<int,int> m_mapIDDHandle;
 };
 
 #define g_objUIMgr CUIManager::sharedInstance()
