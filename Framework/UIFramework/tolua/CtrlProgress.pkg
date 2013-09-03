@@ -1,0 +1,12 @@
+
+class CCtrlProgress : public CCControl, public CCMyWndObject
+{
+	static CCtrlProgress* create(int nWndID, CCMyDialog *pParent);
+	virtual void setValue(float val);
+	virtual float getValue(void) const;
+	virtual void setMinimumValue(float val);
+	virtual float getMinimumValue(void) const;
+	virtual void setMaximumValue(float val);
+	virtual float getMaximumValue(void) const;
+};
+

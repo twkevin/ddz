@@ -1,0 +1,7 @@
+
+class CCtrlStaticEx : public CCNode, public CCScrollViewDelegate, public CCMyWndObject
+{
+	static CCtrlStaticEx* create(int nWndID, CCMyDialog *pParent);
+	void setString(const char* pszText);
+};
+

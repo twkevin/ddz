@@ -1,0 +1,14 @@
+
+class CCtrlPage : public CCLayer,public CCScrollViewDelegate,public CCMyWndObject
+{
+	static CCtrlPage* create(int nWndID, CCMyDialog *pParent);
+	int AddPageItem(CCMyDialog* lpDlg, bool bAutoDestory);
+    int GetPageCount() const;
+	void RemovePageItem(int nIndex);
+	void ClearPages();
+	void SetCurPageIndex(int nPageIndex, bool animated);
+	int GetCurPageIndex() const;
+	const char* GetBgAni(void);
+	void SetBgAni(const char* pszAni);
+};
+

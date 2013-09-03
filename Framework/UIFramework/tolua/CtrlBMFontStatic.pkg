@@ -1,0 +1,6 @@
+
+class CCtrlBMFontStatic : public CCLabelBMFont, public CCMyWndObject
+{
+	static CCtrlBMFontStatic* create(int nWndID, CCMyDialog *pParent);
+};
+

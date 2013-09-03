@@ -1,0 +1,9 @@
+
+class CCtrlCheckBox : public CCControl, public CCMyWndObject
+{
+	static CCtrlCheckBox* create(int nWndID, CCMyDialog *pParent);
+	bool getChecked();
+	virtual void setHighlighted(bool enabled);
+	void setChecked(bool Checked);
+};
+
