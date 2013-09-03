@@ -2,20 +2,32 @@
 -- DlgLogin.lua
 --
 require("lua/object")
+require("lua/DlgGameCenter")
 
 DlgLogin = {}
 
 local obj = {
+		nDialogIDD = 100,
 		myDlg = nil,
 		staText = nil,
         imgLock = nil,
 		btnLogin = nil,
 		btnRegister = nil,
 		editUserName = nil,
-		nDialogIDD = 100,
+		proLoading = nil,
+		BMFontStatic = nil,
+		chcboxPwd = nil,
+		staRuleEx = nil,		
     }
     
         local function touchDownAction()
+			local dlg = DlgGameCenter:create()
+			if nil == dlg then
+        		return
+        	end			
+			local hDlg = CUIManager:sharedInstancePtr():GetHandleByIDD(dlg.nDialogIDD)
+			CUIManager:sharedInstancePtr():ShowDialog(hDlg, true, true)
+			
         	if nil == obj.staText then
         		return
         	end       	
@@ -110,16 +122,32 @@ function DlgLogin:create()
 	
 	
 	local function onBtnRegisterUp()
-        if nil == obj.staText then
+        if nil == obj.proLoading then
         	return
         end 
-        obj.staText:setVisible(true)
+        local fValue = obj.proLoading:getValue() + 0.1;
+        if fValue >= 1.1 then
+            fValue = 0.0
+        end
+	    obj.proLoading:setValue(fValue);
     end		
 	obj.btnRegister = CCtrlButtonEx:create(1006, obj.myDlg)	
 	obj.btnRegister:addHandleOfControlEvent(onBtnRegisterUp,CCControlEventTouchUpInside)
 	
-	obj.editUserName = CCtrlEdit:create(1010, obj.myDlg)	
+	obj.editUserName = CCtrlEdit:create(1010, obj.myDlg)
+	
+	obj.proLoading = CCtrlProgress:create(1100, obj.myDlg)	
+	
+	local fValue = obj.proLoading:getValue() + 0.5;
+	obj.proLoading:setValue(fValue);
+	
+	obj.BMFontStatic = CCtrlBMFontStatic:create(1101, obj.myDlg)	
+	
+	obj.chcboxPwd = CCtrlCheckBox:create(1003, obj.myDlg)
 
+	obj.staRuleEx = CCtrlStaticEx:create(1102, obj.myDlg)
+		
+	
     return obj
 end
 

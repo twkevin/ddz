@@ -45,7 +45,7 @@ public:
 	virtual CCMyWndObject* GetPointObject(cocos2d::CCTouch* pTouch);
 
 public:
-	CREATE_FUNC(CCtrlProgress);
+	CREATE_CTRL(CCtrlProgress);
 	virtual bool init(); 
 	virtual GLint initGUI();
 	virtual GLint readNode();

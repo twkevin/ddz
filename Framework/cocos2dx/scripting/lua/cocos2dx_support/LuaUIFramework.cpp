@@ -1,6 +1,6 @@
 /*
 ** Lua binding: UIFramework
-** Generated automatically by tolua++-1.0.92 on 09/02/13 10:26:13.
+** Generated automatically by tolua++-1.0.92 on 09/03/13 15:11:57.
 */
 
 /****************************************************************************
@@ -70,14 +70,21 @@ static int tolua_collect_DWORD (lua_State* tolua_S)
 /* function to register type */
 static void tolua_reg_types (lua_State* tolua_S)
 {
+ tolua_usertype(tolua_S,"CCtrlStaticEx");
  tolua_usertype(tolua_S,"DLG_IDD");
  tolua_usertype(tolua_S,"CCLayer");
  tolua_usertype(tolua_S,"CCTouch");
+ tolua_usertype(tolua_S,"CCtrlPage");
+ tolua_usertype(tolua_S,"CCtrlBMFontStatic");
  tolua_usertype(tolua_S,"DLG_HANDLE");
+ tolua_usertype(tolua_S,"CCScrollViewDelegate");
+ tolua_usertype(tolua_S,"CCDialogBase");
  tolua_usertype(tolua_S,"CCtrlButtonEx");
  tolua_usertype(tolua_S,"CCNode");
+ tolua_usertype(tolua_S,"CCtrlProgress");
+ tolua_usertype(tolua_S,"DWORD");
  tolua_usertype(tolua_S,"WPARAM");
- tolua_usertype(tolua_S,"CCDialogBase");
+ tolua_usertype(tolua_S,"CCtrlCheckBox");
  tolua_usertype(tolua_S,"CCtrlImageEx");
  tolua_usertype(tolua_S,"CCLabelTTF");
  tolua_usertype(tolua_S,"UINT");
@@ -88,7 +95,7 @@ static void tolua_reg_types (lua_State* tolua_S)
  tolua_usertype(tolua_S,"CCMyWndObject");
  tolua_usertype(tolua_S,"CCtrlStatic");
  tolua_usertype(tolua_S,"CCTextFieldDelegate");
- tolua_usertype(tolua_S,"DWORD");
+ tolua_usertype(tolua_S,"CCLabelBMFont");
  tolua_usertype(tolua_S,"LPARAM");
  tolua_usertype(tolua_S,"CUIManager");
  tolua_usertype(tolua_S,"CCObject");
@@ -1508,6 +1515,38 @@ static int tolua_UIFramework_CCMyDialog_create00(lua_State* tolua_S)
 }
 #endif //#ifndef TOLUA_DISABLE
 
+/* method: newDlg of class  CCMyDialog */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCMyDialog_newDlg00
+static int tolua_UIFramework_CCMyDialog_newDlg00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertable(tolua_S,1,"CCMyDialog",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  int nWndID = ((int)  tolua_tonumber(tolua_S,2,0));
+  {
+   CCMyDialog* tolua_ret = (CCMyDialog*)  CCMyDialog::newDlg(nWndID);
+    int nID = (tolua_ret) ? (int)tolua_ret->m_uID : -1;
+    int* pLuaID = (tolua_ret) ? &tolua_ret->m_nLuaID : NULL;
+    toluafix_pushusertype_ccobject(tolua_S, nID, pLuaID, (void*)tolua_ret,"CCMyDialog");
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'newDlg'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
 /* get function: __CCDialogBase__ of class  CCMyDialog */
 #ifndef TOLUA_DISABLE_tolua_get_CCMyDialog___CCDialogBase__
 static int tolua_get_CCMyDialog___CCDialogBase__(lua_State* tolua_S)
@@ -2168,6 +2207,883 @@ static int tolua_get_CCtrlEdit___CCMyWndObject__(lua_State* tolua_S)
 }
 #endif //#ifndef TOLUA_DISABLE
 
+/* method: create of class  CCtrlBMFontStatic */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlBMFontStatic_create00
+static int tolua_UIFramework_CCtrlBMFontStatic_create00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertable(tolua_S,1,"CCtrlBMFontStatic",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isusertype(tolua_S,3,"CCMyDialog",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,4,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  int nWndID = ((int)  tolua_tonumber(tolua_S,2,0));
+  CCMyDialog* pParent = ((CCMyDialog*)  tolua_tousertype(tolua_S,3,0));
+  {
+   CCtrlBMFontStatic* tolua_ret = (CCtrlBMFontStatic*)  CCtrlBMFontStatic::create(nWndID,pParent);
+    int nID = (tolua_ret) ? (int)tolua_ret->m_uID : -1;
+    int* pLuaID = (tolua_ret) ? &tolua_ret->m_nLuaID : NULL;
+    toluafix_pushusertype_ccobject(tolua_S, nID, pLuaID, (void*)tolua_ret,"CCtrlBMFontStatic");
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'create'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: __CCMyWndObject__ of class  CCtrlBMFontStatic */
+#ifndef TOLUA_DISABLE_tolua_get_CCtrlBMFontStatic___CCMyWndObject__
+static int tolua_get_CCtrlBMFontStatic___CCMyWndObject__(lua_State* tolua_S)
+{
+  CCtrlBMFontStatic* self = (CCtrlBMFontStatic*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable '__CCMyWndObject__'",NULL);
+#endif
+#ifdef __cplusplus
+   tolua_pushusertype(tolua_S,(void*)static_cast<CCMyWndObject*>(self), "CCMyWndObject");
+#else
+   tolua_pushusertype(tolua_S,(void*)((CCMyWndObject*)self), "CCMyWndObject");
+#endif
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: create of class  CCtrlProgress */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlProgress_create00
+static int tolua_UIFramework_CCtrlProgress_create00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertable(tolua_S,1,"CCtrlProgress",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isusertype(tolua_S,3,"CCMyDialog",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,4,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  int nWndID = ((int)  tolua_tonumber(tolua_S,2,0));
+  CCMyDialog* pParent = ((CCMyDialog*)  tolua_tousertype(tolua_S,3,0));
+  {
+   CCtrlProgress* tolua_ret = (CCtrlProgress*)  CCtrlProgress::create(nWndID,pParent);
+    int nID = (tolua_ret) ? (int)tolua_ret->m_uID : -1;
+    int* pLuaID = (tolua_ret) ? &tolua_ret->m_nLuaID : NULL;
+    toluafix_pushusertype_ccobject(tolua_S, nID, pLuaID, (void*)tolua_ret,"CCtrlProgress");
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'create'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: setValue of class  CCtrlProgress */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlProgress_setValue00
+static int tolua_UIFramework_CCtrlProgress_setValue00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CCtrlProgress",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CCtrlProgress* self = (CCtrlProgress*)  tolua_tousertype(tolua_S,1,0);
+  float val = ((float)  tolua_tonumber(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'setValue'", NULL);
+#endif
+  {
+   self->setValue(val);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'setValue'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: getValue of class  CCtrlProgress */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlProgress_getValue00
+static int tolua_UIFramework_CCtrlProgress_getValue00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"const CCtrlProgress",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  const CCtrlProgress* self = (const CCtrlProgress*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'getValue'", NULL);
+#endif
+  {
+   float tolua_ret = (float)  self->getValue();
+   tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'getValue'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: setMinimumValue of class  CCtrlProgress */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlProgress_setMinimumValue00
+static int tolua_UIFramework_CCtrlProgress_setMinimumValue00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CCtrlProgress",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CCtrlProgress* self = (CCtrlProgress*)  tolua_tousertype(tolua_S,1,0);
+  float val = ((float)  tolua_tonumber(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'setMinimumValue'", NULL);
+#endif
+  {
+   self->setMinimumValue(val);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'setMinimumValue'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: getMinimumValue of class  CCtrlProgress */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlProgress_getMinimumValue00
+static int tolua_UIFramework_CCtrlProgress_getMinimumValue00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"const CCtrlProgress",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  const CCtrlProgress* self = (const CCtrlProgress*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'getMinimumValue'", NULL);
+#endif
+  {
+   float tolua_ret = (float)  self->getMinimumValue();
+   tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'getMinimumValue'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: setMaximumValue of class  CCtrlProgress */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlProgress_setMaximumValue00
+static int tolua_UIFramework_CCtrlProgress_setMaximumValue00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CCtrlProgress",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CCtrlProgress* self = (CCtrlProgress*)  tolua_tousertype(tolua_S,1,0);
+  float val = ((float)  tolua_tonumber(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'setMaximumValue'", NULL);
+#endif
+  {
+   self->setMaximumValue(val);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'setMaximumValue'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: getMaximumValue of class  CCtrlProgress */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlProgress_getMaximumValue00
+static int tolua_UIFramework_CCtrlProgress_getMaximumValue00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"const CCtrlProgress",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  const CCtrlProgress* self = (const CCtrlProgress*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'getMaximumValue'", NULL);
+#endif
+  {
+   float tolua_ret = (float)  self->getMaximumValue();
+   tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'getMaximumValue'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: __CCMyWndObject__ of class  CCtrlProgress */
+#ifndef TOLUA_DISABLE_tolua_get_CCtrlProgress___CCMyWndObject__
+static int tolua_get_CCtrlProgress___CCMyWndObject__(lua_State* tolua_S)
+{
+  CCtrlProgress* self = (CCtrlProgress*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable '__CCMyWndObject__'",NULL);
+#endif
+#ifdef __cplusplus
+   tolua_pushusertype(tolua_S,(void*)static_cast<CCMyWndObject*>(self), "CCMyWndObject");
+#else
+   tolua_pushusertype(tolua_S,(void*)((CCMyWndObject*)self), "CCMyWndObject");
+#endif
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: create of class  CCtrlCheckBox */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlCheckBox_create00
+static int tolua_UIFramework_CCtrlCheckBox_create00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertable(tolua_S,1,"CCtrlCheckBox",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isusertype(tolua_S,3,"CCMyDialog",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,4,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  int nWndID = ((int)  tolua_tonumber(tolua_S,2,0));
+  CCMyDialog* pParent = ((CCMyDialog*)  tolua_tousertype(tolua_S,3,0));
+  {
+   CCtrlCheckBox* tolua_ret = (CCtrlCheckBox*)  CCtrlCheckBox::create(nWndID,pParent);
+    int nID = (tolua_ret) ? (int)tolua_ret->m_uID : -1;
+    int* pLuaID = (tolua_ret) ? &tolua_ret->m_nLuaID : NULL;
+    toluafix_pushusertype_ccobject(tolua_S, nID, pLuaID, (void*)tolua_ret,"CCtrlCheckBox");
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'create'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: getChecked of class  CCtrlCheckBox */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlCheckBox_getChecked00
+static int tolua_UIFramework_CCtrlCheckBox_getChecked00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CCtrlCheckBox",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CCtrlCheckBox* self = (CCtrlCheckBox*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'getChecked'", NULL);
+#endif
+  {
+   bool tolua_ret = (bool)  self->getChecked();
+   tolua_pushboolean(tolua_S,(bool)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'getChecked'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: setHighlighted of class  CCtrlCheckBox */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlCheckBox_setHighlighted00
+static int tolua_UIFramework_CCtrlCheckBox_setHighlighted00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CCtrlCheckBox",0,&tolua_err) ||
+     !tolua_isboolean(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CCtrlCheckBox* self = (CCtrlCheckBox*)  tolua_tousertype(tolua_S,1,0);
+  bool enabled = ((bool)  tolua_toboolean(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'setHighlighted'", NULL);
+#endif
+  {
+   self->setHighlighted(enabled);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'setHighlighted'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: setChecked of class  CCtrlCheckBox */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlCheckBox_setChecked00
+static int tolua_UIFramework_CCtrlCheckBox_setChecked00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CCtrlCheckBox",0,&tolua_err) ||
+     !tolua_isboolean(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CCtrlCheckBox* self = (CCtrlCheckBox*)  tolua_tousertype(tolua_S,1,0);
+  bool Checked = ((bool)  tolua_toboolean(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'setChecked'", NULL);
+#endif
+  {
+   self->setChecked(Checked);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'setChecked'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: __CCMyWndObject__ of class  CCtrlCheckBox */
+#ifndef TOLUA_DISABLE_tolua_get_CCtrlCheckBox___CCMyWndObject__
+static int tolua_get_CCtrlCheckBox___CCMyWndObject__(lua_State* tolua_S)
+{
+  CCtrlCheckBox* self = (CCtrlCheckBox*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable '__CCMyWndObject__'",NULL);
+#endif
+#ifdef __cplusplus
+   tolua_pushusertype(tolua_S,(void*)static_cast<CCMyWndObject*>(self), "CCMyWndObject");
+#else
+   tolua_pushusertype(tolua_S,(void*)((CCMyWndObject*)self), "CCMyWndObject");
+#endif
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: create of class  CCtrlStaticEx */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlStaticEx_create00
+static int tolua_UIFramework_CCtrlStaticEx_create00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertable(tolua_S,1,"CCtrlStaticEx",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isusertype(tolua_S,3,"CCMyDialog",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,4,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  int nWndID = ((int)  tolua_tonumber(tolua_S,2,0));
+  CCMyDialog* pParent = ((CCMyDialog*)  tolua_tousertype(tolua_S,3,0));
+  {
+   CCtrlStaticEx* tolua_ret = (CCtrlStaticEx*)  CCtrlStaticEx::create(nWndID,pParent);
+    tolua_pushusertype(tolua_S,(void*)tolua_ret,"CCtrlStaticEx");
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'create'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: setString of class  CCtrlStaticEx */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlStaticEx_setString00
+static int tolua_UIFramework_CCtrlStaticEx_setString00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CCtrlStaticEx",0,&tolua_err) ||
+     !tolua_isstring(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CCtrlStaticEx* self = (CCtrlStaticEx*)  tolua_tousertype(tolua_S,1,0);
+  const char* pszText = ((const char*)  tolua_tostring(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'setString'", NULL);
+#endif
+  {
+   self->setString(pszText);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'setString'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: __CCScrollViewDelegate__ of class  CCtrlStaticEx */
+#ifndef TOLUA_DISABLE_tolua_get_CCtrlStaticEx___CCScrollViewDelegate__
+static int tolua_get_CCtrlStaticEx___CCScrollViewDelegate__(lua_State* tolua_S)
+{
+  CCtrlStaticEx* self = (CCtrlStaticEx*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable '__CCScrollViewDelegate__'",NULL);
+#endif
+#ifdef __cplusplus
+   tolua_pushusertype(tolua_S,(void*)static_cast<CCScrollViewDelegate*>(self), "CCScrollViewDelegate");
+#else
+   tolua_pushusertype(tolua_S,(void*)((CCScrollViewDelegate*)self), "CCScrollViewDelegate");
+#endif
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: __CCMyWndObject__ of class  CCtrlStaticEx */
+#ifndef TOLUA_DISABLE_tolua_get_CCtrlStaticEx___CCMyWndObject__
+static int tolua_get_CCtrlStaticEx___CCMyWndObject__(lua_State* tolua_S)
+{
+  CCtrlStaticEx* self = (CCtrlStaticEx*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable '__CCMyWndObject__'",NULL);
+#endif
+#ifdef __cplusplus
+   tolua_pushusertype(tolua_S,(void*)static_cast<CCMyWndObject*>(self), "CCMyWndObject");
+#else
+   tolua_pushusertype(tolua_S,(void*)((CCMyWndObject*)self), "CCMyWndObject");
+#endif
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: create of class  CCtrlPage */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlPage_create00
+static int tolua_UIFramework_CCtrlPage_create00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertable(tolua_S,1,"CCtrlPage",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isusertype(tolua_S,3,"CCMyDialog",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,4,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  int nWndID = ((int)  tolua_tonumber(tolua_S,2,0));
+  CCMyDialog* pParent = ((CCMyDialog*)  tolua_tousertype(tolua_S,3,0));
+  {
+   CCtrlPage* tolua_ret = (CCtrlPage*)  CCtrlPage::create(nWndID,pParent);
+    int nID = (tolua_ret) ? (int)tolua_ret->m_uID : -1;
+    int* pLuaID = (tolua_ret) ? &tolua_ret->m_nLuaID : NULL;
+    toluafix_pushusertype_ccobject(tolua_S, nID, pLuaID, (void*)tolua_ret,"CCtrlPage");
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'create'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: AddPageItem of class  CCtrlPage */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlPage_AddPageItem00
+static int tolua_UIFramework_CCtrlPage_AddPageItem00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CCtrlPage",0,&tolua_err) ||
+     !tolua_isusertype(tolua_S,2,"CCMyDialog",0,&tolua_err) ||
+     !tolua_isboolean(tolua_S,3,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,4,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CCtrlPage* self = (CCtrlPage*)  tolua_tousertype(tolua_S,1,0);
+  CCMyDialog* lpDlg = ((CCMyDialog*)  tolua_tousertype(tolua_S,2,0));
+  bool bAutoDestory = ((bool)  tolua_toboolean(tolua_S,3,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'AddPageItem'", NULL);
+#endif
+  {
+   int tolua_ret = (int)  self->AddPageItem(lpDlg,bAutoDestory);
+   tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'AddPageItem'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: GetPageCount of class  CCtrlPage */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlPage_GetPageCount00
+static int tolua_UIFramework_CCtrlPage_GetPageCount00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"const CCtrlPage",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  const CCtrlPage* self = (const CCtrlPage*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'GetPageCount'", NULL);
+#endif
+  {
+   int tolua_ret = (int)  self->GetPageCount();
+   tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'GetPageCount'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: RemovePageItem of class  CCtrlPage */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlPage_RemovePageItem00
+static int tolua_UIFramework_CCtrlPage_RemovePageItem00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CCtrlPage",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CCtrlPage* self = (CCtrlPage*)  tolua_tousertype(tolua_S,1,0);
+  int nIndex = ((int)  tolua_tonumber(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'RemovePageItem'", NULL);
+#endif
+  {
+   self->RemovePageItem(nIndex);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'RemovePageItem'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: ClearPages of class  CCtrlPage */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlPage_ClearPages00
+static int tolua_UIFramework_CCtrlPage_ClearPages00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CCtrlPage",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CCtrlPage* self = (CCtrlPage*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'ClearPages'", NULL);
+#endif
+  {
+   self->ClearPages();
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'ClearPages'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: SetCurPageIndex of class  CCtrlPage */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlPage_SetCurPageIndex00
+static int tolua_UIFramework_CCtrlPage_SetCurPageIndex00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CCtrlPage",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isboolean(tolua_S,3,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,4,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CCtrlPage* self = (CCtrlPage*)  tolua_tousertype(tolua_S,1,0);
+  int nPageIndex = ((int)  tolua_tonumber(tolua_S,2,0));
+  bool animated = ((bool)  tolua_toboolean(tolua_S,3,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'SetCurPageIndex'", NULL);
+#endif
+  {
+   self->SetCurPageIndex(nPageIndex,animated);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'SetCurPageIndex'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: GetCurPageIndex of class  CCtrlPage */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlPage_GetCurPageIndex00
+static int tolua_UIFramework_CCtrlPage_GetCurPageIndex00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"const CCtrlPage",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  const CCtrlPage* self = (const CCtrlPage*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'GetCurPageIndex'", NULL);
+#endif
+  {
+   int tolua_ret = (int)  self->GetCurPageIndex();
+   tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'GetCurPageIndex'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: GetBgAni of class  CCtrlPage */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlPage_GetBgAni00
+static int tolua_UIFramework_CCtrlPage_GetBgAni00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CCtrlPage",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CCtrlPage* self = (CCtrlPage*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'GetBgAni'", NULL);
+#endif
+  {
+   const char* tolua_ret = (const char*)  self->GetBgAni();
+   tolua_pushstring(tolua_S,(const char*)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'GetBgAni'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: SetBgAni of class  CCtrlPage */
+#ifndef TOLUA_DISABLE_tolua_UIFramework_CCtrlPage_SetBgAni00
+static int tolua_UIFramework_CCtrlPage_SetBgAni00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CCtrlPage",0,&tolua_err) ||
+     !tolua_isstring(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CCtrlPage* self = (CCtrlPage*)  tolua_tousertype(tolua_S,1,0);
+  const char* pszAni = ((const char*)  tolua_tostring(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'SetBgAni'", NULL);
+#endif
+  {
+   self->SetBgAni(pszAni);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'SetBgAni'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: __CCScrollViewDelegate__ of class  CCtrlPage */
+#ifndef TOLUA_DISABLE_tolua_get_CCtrlPage___CCScrollViewDelegate__
+static int tolua_get_CCtrlPage___CCScrollViewDelegate__(lua_State* tolua_S)
+{
+  CCtrlPage* self = (CCtrlPage*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable '__CCScrollViewDelegate__'",NULL);
+#endif
+#ifdef __cplusplus
+   tolua_pushusertype(tolua_S,(void*)static_cast<CCScrollViewDelegate*>(self), "CCScrollViewDelegate");
+#else
+   tolua_pushusertype(tolua_S,(void*)((CCScrollViewDelegate*)self), "CCScrollViewDelegate");
+#endif
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: __CCMyWndObject__ of class  CCtrlPage */
+#ifndef TOLUA_DISABLE_tolua_get_CCtrlPage___CCMyWndObject__
+static int tolua_get_CCtrlPage___CCMyWndObject__(lua_State* tolua_S)
+{
+  CCtrlPage* self = (CCtrlPage*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable '__CCMyWndObject__'",NULL);
+#endif
+#ifdef __cplusplus
+   tolua_pushusertype(tolua_S,(void*)static_cast<CCMyWndObject*>(self), "CCMyWndObject");
+#else
+   tolua_pushusertype(tolua_S,(void*)((CCMyWndObject*)self), "CCMyWndObject");
+#endif
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
 /* Open function */
 TOLUA_API int tolua_UIFramework_open (lua_State* tolua_S)
 {
@@ -2221,6 +3137,7 @@ TOLUA_API int tolua_UIFramework_open (lua_State* tolua_S)
    tolua_function(tolua_S,"isTouchInside",tolua_UIFramework_CCMyDialog_isTouchInside00);
    tolua_function(tolua_S,"createEx",tolua_UIFramework_CCMyDialog_createEx00);
    tolua_function(tolua_S,"create",tolua_UIFramework_CCMyDialog_create00);
+   tolua_function(tolua_S,"newDlg",tolua_UIFramework_CCMyDialog_newDlg00);
    tolua_variable(tolua_S,"__CCDialogBase__",tolua_get_CCMyDialog___CCDialogBase__,NULL);
   tolua_endmodule(tolua_S);
   tolua_cclass(tolua_S,"CCtrlStatic","CCtrlStatic","CCLabelTTF",NULL);
@@ -2262,6 +3179,51 @@ TOLUA_API int tolua_UIFramework_open (lua_State* tolua_S)
    tolua_function(tolua_S,"setString",tolua_UIFramework_CCtrlEdit_setString00);
    tolua_variable(tolua_S,"__CCTextFieldDelegate__",tolua_get_CCtrlEdit___CCTextFieldDelegate__,NULL);
    tolua_variable(tolua_S,"__CCMyWndObject__",tolua_get_CCtrlEdit___CCMyWndObject__,NULL);
+  tolua_endmodule(tolua_S);
+  tolua_cclass(tolua_S,"CCtrlBMFontStatic","CCtrlBMFontStatic","CCLabelBMFont",NULL);
+  tolua_beginmodule(tolua_S,"CCtrlBMFontStatic");
+   tolua_function(tolua_S,"create",tolua_UIFramework_CCtrlBMFontStatic_create00);
+   tolua_variable(tolua_S,"__CCMyWndObject__",tolua_get_CCtrlBMFontStatic___CCMyWndObject__,NULL);
+  tolua_endmodule(tolua_S);
+  tolua_cclass(tolua_S,"CCtrlProgress","CCtrlProgress","CCControl",NULL);
+  tolua_beginmodule(tolua_S,"CCtrlProgress");
+   tolua_function(tolua_S,"create",tolua_UIFramework_CCtrlProgress_create00);
+   tolua_function(tolua_S,"setValue",tolua_UIFramework_CCtrlProgress_setValue00);
+   tolua_function(tolua_S,"getValue",tolua_UIFramework_CCtrlProgress_getValue00);
+   tolua_function(tolua_S,"setMinimumValue",tolua_UIFramework_CCtrlProgress_setMinimumValue00);
+   tolua_function(tolua_S,"getMinimumValue",tolua_UIFramework_CCtrlProgress_getMinimumValue00);
+   tolua_function(tolua_S,"setMaximumValue",tolua_UIFramework_CCtrlProgress_setMaximumValue00);
+   tolua_function(tolua_S,"getMaximumValue",tolua_UIFramework_CCtrlProgress_getMaximumValue00);
+   tolua_variable(tolua_S,"__CCMyWndObject__",tolua_get_CCtrlProgress___CCMyWndObject__,NULL);
+  tolua_endmodule(tolua_S);
+  tolua_cclass(tolua_S,"CCtrlCheckBox","CCtrlCheckBox","CCControl",NULL);
+  tolua_beginmodule(tolua_S,"CCtrlCheckBox");
+   tolua_function(tolua_S,"create",tolua_UIFramework_CCtrlCheckBox_create00);
+   tolua_function(tolua_S,"getChecked",tolua_UIFramework_CCtrlCheckBox_getChecked00);
+   tolua_function(tolua_S,"setHighlighted",tolua_UIFramework_CCtrlCheckBox_setHighlighted00);
+   tolua_function(tolua_S,"setChecked",tolua_UIFramework_CCtrlCheckBox_setChecked00);
+   tolua_variable(tolua_S,"__CCMyWndObject__",tolua_get_CCtrlCheckBox___CCMyWndObject__,NULL);
+  tolua_endmodule(tolua_S);
+  tolua_cclass(tolua_S,"CCtrlStaticEx","CCtrlStaticEx","CCNode",NULL);
+  tolua_beginmodule(tolua_S,"CCtrlStaticEx");
+   tolua_function(tolua_S,"create",tolua_UIFramework_CCtrlStaticEx_create00);
+   tolua_function(tolua_S,"setString",tolua_UIFramework_CCtrlStaticEx_setString00);
+   tolua_variable(tolua_S,"__CCScrollViewDelegate__",tolua_get_CCtrlStaticEx___CCScrollViewDelegate__,NULL);
+   tolua_variable(tolua_S,"__CCMyWndObject__",tolua_get_CCtrlStaticEx___CCMyWndObject__,NULL);
+  tolua_endmodule(tolua_S);
+  tolua_cclass(tolua_S,"CCtrlPage","CCtrlPage","CCLayer",NULL);
+  tolua_beginmodule(tolua_S,"CCtrlPage");
+   tolua_function(tolua_S,"create",tolua_UIFramework_CCtrlPage_create00);
+   tolua_function(tolua_S,"AddPageItem",tolua_UIFramework_CCtrlPage_AddPageItem00);
+   tolua_function(tolua_S,"GetPageCount",tolua_UIFramework_CCtrlPage_GetPageCount00);
+   tolua_function(tolua_S,"RemovePageItem",tolua_UIFramework_CCtrlPage_RemovePageItem00);
+   tolua_function(tolua_S,"ClearPages",tolua_UIFramework_CCtrlPage_ClearPages00);
+   tolua_function(tolua_S,"SetCurPageIndex",tolua_UIFramework_CCtrlPage_SetCurPageIndex00);
+   tolua_function(tolua_S,"GetCurPageIndex",tolua_UIFramework_CCtrlPage_GetCurPageIndex00);
+   tolua_function(tolua_S,"GetBgAni",tolua_UIFramework_CCtrlPage_GetBgAni00);
+   tolua_function(tolua_S,"SetBgAni",tolua_UIFramework_CCtrlPage_SetBgAni00);
+   tolua_variable(tolua_S,"__CCScrollViewDelegate__",tolua_get_CCtrlPage___CCScrollViewDelegate__,NULL);
+   tolua_variable(tolua_S,"__CCMyWndObject__",tolua_get_CCtrlPage___CCMyWndObject__,NULL);
   tolua_endmodule(tolua_S);
  tolua_endmodule(tolua_S);
  return 1;

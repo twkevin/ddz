@@ -25,7 +25,7 @@ public:
 	virtual CCMyWndObject* GetPointObject(cocos2d::CCTouch* pTouch);
 
 public:
-	CREATE_FUNC(CCtrlCheckBox);
+	CREATE_CTRL(CCtrlCheckBox);
 	virtual bool init(); 
 	virtual GLint initGUI();
 	virtual GLint readNode();

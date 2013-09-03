@@ -42,6 +42,18 @@ CCMyDialog* CCMyDialog::create(int nWndID)
 	return  CCMyDialog::createEx(nWndID, NULL);
 }
 
+CCMyDialog* CCMyDialog::newDlg(int nWndID)
+{
+	CCMyDialog *pRet = new CCMyDialog();
+	if (pRet)
+	{
+		pRet->setWndID(nWndID);
+		return pRet; 
+	}
+
+	return NULL;
+}
+
 bool CCMyDialog::init()
 {
 	if ( !CCLayer::init() )

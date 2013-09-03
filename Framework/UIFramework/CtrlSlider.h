@@ -66,7 +66,7 @@ protected:
     float valueForLocation(CCPoint location);
 
 public:
-	CREATE_FUNC(CCtrlSlider);
+	CREATE_CTRL(CCtrlSlider);
 	virtual bool init(); 
 	virtual GLint initGUI();
 	virtual GLint readNode();

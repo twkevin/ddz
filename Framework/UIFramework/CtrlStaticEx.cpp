@@ -1,3 +1,4 @@
+#include "MyDialog.h"
 #include "CtrlStaticEx.h"
 
 #include "StringManager.h"

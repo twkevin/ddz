@@ -26,7 +26,7 @@ public:
 	virtual CCMyWndObject* GetPointObject(cocos2d::CCTouch* pTouch);
 
 public:
-	CREATE_FUNC(CCtrlBMFontStatic);
+	CREATE_CTRL(CCtrlBMFontStatic);
 	virtual bool init(); 
 	virtual GLint initGUI();
 	virtual GLint readNode();

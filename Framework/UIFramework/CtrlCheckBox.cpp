@@ -1,3 +1,4 @@
+#include "MyDialog.h"
 #include "CtrlCheckBox.h"
 
 #include "StringManager.h"

@@ -12,6 +12,11 @@ local CCObjectTypes = {
 	"CUIManager",
 	"CCtrlEdit",
 	"CCMyDialog",
+	"CCtrlBMFontStatic",
+	"CCtrlProgress",
+	"CCtrlCheckBox",
+	"CtrlStaticEx",
+	"CCtrlPage",
 }
 
 -- register CCObject types

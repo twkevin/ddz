@@ -80,6 +80,7 @@ public:
 	CommonEvent m_pageChangeEvent;
 
 public:
+	static CCtrlPage* create(int nWndID, CCMyDialog *pParent);
 	virtual bool init(void); 
 	virtual GLint initGUI(void);
 	virtual GLint readNode(void);

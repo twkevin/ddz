@@ -38,6 +38,7 @@ public:
 
 	static CCMyDialog* createEx(int nWndID, CCMyDialog *pParent);
 	static CCMyDialog* create(int nWndID);
+	static CCMyDialog* newDlg(int nWndID);
 
 public:
 	const char* GetBgAni(void);

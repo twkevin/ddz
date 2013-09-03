@@ -1,3 +1,4 @@
+#include "MyDialog.h"
 #include "CtrlSlider.h"
 
 #include "MyGlobal.h"

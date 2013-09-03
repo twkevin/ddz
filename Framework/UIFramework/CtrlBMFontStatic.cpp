@@ -1,5 +1,5 @@
+#include "MyDialog.h"
 #include "CtrlBMFontStatic.h"
-
 
 #include "StringManager.h"
 #include "IniMgr.h"

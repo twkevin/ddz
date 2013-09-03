@@ -215,7 +215,8 @@ local function main()
     sceneGame:addChild(createLayerMenu())
 	
 	local dlg = DlgLogin:create()
-	sceneGame:addChild(dlg.myDlg, 0, dlg.nDialogIDD)
+	local hDlg = CUIManager:sharedInstancePtr():GetHandleByIDD(dlg.nDialogIDD)
+	sceneGame:addChild(dlg.myDlg, 0, hDlg)
 	
 	local msgId1 = testloadplayer()
 	local msgId = testProtoc()

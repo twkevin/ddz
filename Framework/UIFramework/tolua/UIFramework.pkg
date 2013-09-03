@@ -6,6 +6,14 @@ $pfile "CtrlStatic.pkg"
 $pfile "CtrlImageEx.pkg"
 $pfile "CtrlButtonEx.pkg"
 $pfile "CtrlEdit.pkg"
+$pfile "CtrlBMFontStatic.pkg"
+$pfile "CtrlProgress.pkg"
+$pfile "CtrlCheckBox.pkg"
+$pfile "CtrlStaticEx.pkg"
+$pfile "CtrlPage.pkg"
+
+
+
 
 
 

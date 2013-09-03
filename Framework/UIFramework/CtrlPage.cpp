@@ -53,6 +53,29 @@ CCtrlPage::~CCtrlPage()
 	ClearPages();
 }
 
+CCtrlPage* CCtrlPage::create(int nWndID, CCMyDialog *pParent)
+{
+	if (NULL == pParent)
+	{
+		return NULL;
+	}
+
+	CCtrlPage *pRet = new CCtrlPage();
+	if (pRet)
+	{ 
+		int nParentWndID = pParent->getWndID();
+		pRet->setParentWndID(nParentWndID);
+		pRet->setWndID(nWndID);
+		pRet->SetUIParent(pParent);
+		pRet->initGUI();
+		pParent->addChild(pRet, 0, pRet->GetHandle());
+
+		return pRet; 
+	}
+
+	return NULL;
+}
+
 int CCtrlPage::GetType() const
 {
 	return CTRL_PAGE;

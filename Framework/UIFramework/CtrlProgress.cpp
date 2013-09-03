@@ -1,3 +1,4 @@
+#include "MyDialog.h"
 #include "CtrlProgress.h"
 
 #include "MyGlobal.h"

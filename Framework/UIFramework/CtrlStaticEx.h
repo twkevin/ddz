@@ -43,7 +43,7 @@ public:
 
 
 public:
-
+	CREATE_CTRL(CCtrlStaticEx);
 	void setString(const char* pszText);
 	virtual bool init(); 
 	virtual GLint initGUI();
